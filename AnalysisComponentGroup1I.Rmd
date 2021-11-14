@@ -1,0 +1,109 @@
+---
+output:
+  pdf_document:
+    fig_height: 3
+    fig_width: 5
+  html_document:
+    fig_height: 3
+    fig_width: 5
+  word_document:
+    fig_height: 3
+    fig_width: 5
+---
+
+### STAT 230 - Analysis Component - Group X
+
+```{r, include=FALSE}
+library(mosaic)
+library(readr)
+library(GGally)
+```
+
+Names: Vanesa Farooq and Angelica Kim
+
+(Tentative) Project Title: Avocado Prices and Sales Volume in Multiple US Markets
+
+Our project is about our ability to predict avocado prices based on the characteristics of the avocado market.
+
+### Read in the data
+
+```{r}
+group1Idata <- read_csv("https://awagaman.people.amherst.edu/stat230/projectsF21/group1IdataF21.csv")
+```
+
+### Summary command on data set
+
+```{r}
+summary(group1Idata)
+```
+
+
+### Data Codebook
+
+List your variables and whether they are quantitative/qualitative (numeric vs categorical), along with other notes about the variables. Hint, to make a nice list, you need to put two spaces at the end of each line to force RMarkdown to start a new line. Check this out below:
+
+Our variables are:  
+Variable 1 -  Date, categorical  
+Variable 2 -  Average Price, quantitative  
+Variable 3 -  Total Volume, quantitative  
+Variable 4 -  PLU 4046, categorical  
+Variable 5 -  PLU 4225, categorical  
+Variable 6 -  PLU 4770, categorical  
+Variable 7 -  Total Bags, quantitative  
+Variable 8 -  Small Bags, quantitative  
+Variable 9 -  Large Bags, quantitative  
+Variable 10 - XLarge Bags, quantitative  
+Variable 11 - type, categorial  
+Variable 12 - year, categorical  
+Variable 13 - region, categorical  
+
+
+### Analysis Plan
+
+A rough outline for your proposed analysis, including univariate summaries, bivariate (or multivariate) relationships and plans for your model(s) and visualizations should follow via the sections below; as well as any additional thoughts about your randomization-based procedure. 
+
+This section doesn't need to have plots for EVERY variable in your data set if you have many, but it needs to demonstrate that you've started exploring the data, identifying issues that arise, and are looking into what appropriate models might be. 
+
+What you do here may be useful for your reports (i.e. may reuse it), so you may want to spend time making nice labels for plots, etc. 
+
+#### Prelim Univariate Analysis
+
+Obtain basic univariate descriptive statistics and graphs for variables relevant to your analysis.
+
+```{r}
+#for quantitative variables, you could use
+#gf_histogram, gf_boxplot, gf_dens
+#favstats
+mod1 <- lm()
+```
+
+```{r}
+#for categorical variables, you could use
+#tally
+```
+
+COMMENT on what you see! Suggest doing this as you go. I.E. Do a summary for variable 1, then variable 2, etc. 
+
+It is very important to do this for your response variable(s), so be sure those are included here.
+
+#### Prelim Multivariate Analysis
+
+Scatterplots and side-by-side boxplots to examine bivariate relationships that will be useful for building your models. I.E. relationships between your response(s) and predictors. You can investigate relationships between predictors of interest as desired. 
+
+```{r}
+#you might use
+#gf_point or gf_boxplot #or if trying to do many at once
+#ggpairs()
+```
+
+COMMENT on what you see! 
+
+You can do scatterplots by color, etc. to do more than bivariate relationships. Other options include faceting to include more variables. 
+
+#### Randomization-Based Procedure Thoughts
+
+Thoughts on what procedure you might like to try; aim to use, etc. 
+
+### Questions for me
+
+Any questions you have for me.
